@@ -24,6 +24,7 @@
 
   header {
     flex: 0 0 auto;
+    min-height: 70px;
 
     .logo {
       display: block;
@@ -34,7 +35,8 @@
       margin-right: 1rem;
       img {
         display: block;
-        height: 100%;
+        height: auto;
+        width: 175px;
       }
     }
   }
@@ -49,7 +51,6 @@
   background-color: rgb(17, 24, 39);
   .course-title-lockup {
     min-width: 0;
-
     span {
       white-space: nowrap;
       overflow: hidden;
