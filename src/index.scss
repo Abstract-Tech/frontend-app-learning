@@ -56,12 +56,15 @@
       overflow: hidden;
       text-overflow: ellipsis;
       padding-bottom: 0.1rem;
+      color: #fff;
     }
   }
 
   .user-dropdown {
     .btn {
       height: 3rem;
+      color: #fff;
+      border-color: #fff;
       @media (max-width: -1 + map-get($grid-breakpoints, "sm")) {
         padding: 0 0.5rem;
       }
