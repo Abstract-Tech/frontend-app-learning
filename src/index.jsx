@@ -10,7 +10,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Switch } from 'react-router-dom';
 
-import Footer from './course-footer/Footer';
+import Footer from '@edx/frontend-component-footer';
 
 import appMessages from './i18n';
 import { UserMessagesProvider } from './generic/user-messages';
@@ -95,5 +95,6 @@ initialize({
   },
   messages: [
     appMessages,
+    footerMessages,
   ],
 });
