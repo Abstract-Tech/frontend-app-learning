@@ -100,7 +100,8 @@ const Footer = () => (
                 like to show you. Find out here
               </p>
               <p className="mt-4 text-gray-400 space-y-4 p-0">
-                edX®, Open edX®, and MicroMasters® are registered trademarks of edX Inc. MicroBachelors is a trademark of edX Inc. All Rights Reserved.
+                edX®, Open edX®, and MicroMasters® are registered trademarks of edX Inc.
+                MicroBachelors is a trademark of edX Inc. All Rights Reserved.
               </p>
             </div>
             <div className="mt-12 md:mt-0">
