@@ -378,3 +378,7 @@
 
 /** [MM-P2P] Experiment */
 @import "experiments/mm-p2p/index.scss";
+
+a:not(.btn){
+  color: #6366f1 !important;
+}
