@@ -1,0 +1,12 @@
+stages:
+  - build
+  - push
+
+build:
+    script:
+        - docker login registry.abzt.de -u gitlab -p $DOCKER_REGISTRY_PASSWORD
+        - docker build -t registry.abzt.de/frontend-app-learning-lilac:0.3.1 .
+
+push:
+    script:
+        - docker push registry.abzt.de/frontend-app-learning-lilac:0.3.1
