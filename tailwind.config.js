@@ -1,9 +1,12 @@
 module.exports = {
-  content: [
-    './src/**/*.{js,jsx,ts,tsx}',
-  ],
-  theme: {
-    extend: {},
+  purge:{
+    enabled:true,
   },
+  content: {
+  },
+  theme: {
+      extend: {},
+  },
+
   plugins: [],
-};
+}

@@ -7,7 +7,7 @@
 
 // TODO: Fix .container-fluid for mobile in paragon
 .container-fluid {
-  @media (max-width: -1 + map-get($grid-breakpoints, "sm")) {
+  @media (max-width: -1 + map-get($grid-breakpoints, 'sm')) {
     padding-left: $grid-gutter-width/2;
     padding-right: $grid-gutter-width/2;
   }
@@ -24,19 +24,18 @@
 
   header {
     flex: 0 0 auto;
-    min-height: 70px;
-
+   background-color: rgb(17, 24, 39);
+   padding: 10px;
     .logo {
       display: block;
       box-sizing: content-box;
       position: relative;
-      top: 0.1em;
+      top: .10em;
       height: 1.75rem;
       margin-right: 1rem;
       img {
         display: block;
-        height: auto;
-        width: 175px;
+        height: 100%;
       }
     }
   }
@@ -48,31 +47,29 @@
 
 .course-header {
   min-width: 0;
-  background-color: rgb(17, 24, 39);
+
   .course-title-lockup {
     min-width: 0;
+
     span {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      padding-bottom: 0.1rem;
-      color: #fff;
+      padding-bottom: .1rem;
     }
   }
 
   .user-dropdown {
     .btn {
       height: 3rem;
-      color: #fff;
-      border-color: #fff;
-      @media (max-width: -1 + map-get($grid-breakpoints, "sm")) {
-        padding: 0 0.5rem;
+      @media (max-width: -1 + map-get($grid-breakpoints, 'sm')) {
+        padding: 0 .5rem;
       }
     }
   }
 }
 .course-tabs-navigation {
-  border-bottom: solid 1px #eaeaea;
+  border-bottom: solid 1px #EAEAEA;
 }
 
 .nav-underline-tabs {
@@ -106,7 +103,7 @@
 
   // On mobile, the unit container will be responsible
   // for container padding.
-  @media (min-width: map-get($grid-breakpoints, "sm")) {
+  @media (min-width: map-get($grid-breakpoints, 'sm')) {
     max-width: 1440px;
     width: 100%;
     margin-right: auto;
@@ -115,8 +112,8 @@
 }
 
 .sequence {
-  @media (min-width: map-get($grid-breakpoints, "sm")) {
-    border: solid 1px #eaeaea;
+  @media (min-width: map-get($grid-breakpoints, 'sm')) {
+    border: solid 1px #EAEAEA;
     border-radius: 4px;
   }
 }
@@ -124,7 +121,7 @@
 .sequence-navigation {
   display: flex;
 
-  @media (min-width: map-get($grid-breakpoints, "sm")) {
+  @media (min-width: map-get($grid-breakpoints, 'sm')) {
     margin: -1px -1px 0;
   }
 
@@ -132,11 +129,11 @@
     flex-grow: 1;
     display: inline-flex;
     border-radius: 0;
-    border: solid 1px #eaeaea;
+    border: solid 1px #EAEAEA;
     border-left-width: 0;
     position: relative;
     font-weight: 400;
-    padding: 0 0.375rem;
+    padding: 0 .375rem;
     height: 3rem;
     justify-content: center;
     align-items: center;
@@ -155,7 +152,7 @@
 
     &.active {
       &:after {
-        content: "";
+        content: '';
         position: absolute;
         bottom: -1px;
         left: 0;
@@ -166,7 +163,7 @@
     }
 
     &.complete {
-      background-color: #eef7e5;
+      background-color: #EEF7E5;
       color: $success;
     }
 
@@ -227,7 +224,7 @@
         }
 
         &:after {
-          content: "";
+          content: '';
           position: absolute;
           bottom: 0px;
           left: 0px;
@@ -248,14 +245,13 @@
     }
   }
 
-  .previous-btn,
-  .next-btn {
+  .previous-btn, .next-btn {
     color: $gray-700;
     display: inline-flex;
     justify-content: center;
     align-items: center;
 
-    @media (max-width: -1 + map-get($grid-breakpoints, "sm")) {
+    @media (max-width: -1 + map-get($grid-breakpoints, 'sm')) {
       padding-top: 1rem;
       padding-bottom: 1rem;
 
@@ -264,7 +260,7 @@
       }
     }
 
-    @media (min-width: map-get($grid-breakpoints, "sm")) {
+    @media (min-width: map-get($grid-breakpoints, 'sm')) {
       min-width: fit-content;
       padding-left: 2rem;
       padding-right: 2rem;
@@ -275,7 +271,7 @@
     border-left-width: 0;
     margin-left: 0;
 
-    @media (min-width: map-get($grid-breakpoints, "sm")) {
+    @media (min-width: map-get($grid-breakpoints, 'sm')) {
       border-left-width: 1px;
       border-top-left-radius: 4px;
     }
@@ -285,7 +281,7 @@
     border-left-width: 1px;
     border-right-width: 0;
 
-    @media (min-width: map-get($grid-breakpoints, "sm")) {
+    @media (min-width: map-get($grid-breakpoints, 'sm')) {
       border-top-right-radius: 4px;
       border-right-width: 1px;
     }
@@ -353,7 +349,7 @@
   // I don't like this.  We need to set a height of 100% on a div created by react-focus-on, a
   // package we use in our Modal.  That div has no class name or ID, so instead we're uniquely
   // identifying it by based on a unique attribute it has which its siblings don't share.
-  > div[data-focus-lock-disabled="false"] {
+  > div[data-focus-lock-disabled=false] {
     height: 100%;
   }
 
@@ -365,20 +361,18 @@
 }
 
 // Import component-specific sass files
-@import "courseware/course/celebration/CelebrationModal.scss";
-@import "shared/streak-celebration/StreakCelebrationModal.scss";
-@import "courseware/course/content-tools/calculator/calculator.scss";
-@import "courseware/course/content-tools/contentTools.scss";
-@import "course-home/dates-tab/Badge.scss";
-@import "course-home/dates-tab/Day.scss";
-@import "course-home/outline-tab/widgets/UpgradeCard.scss";
-@import "course-home/outline-tab/widgets/ProctoringInfoPanel.scss";
-@import "course-home/progress-tab/course-completion/CompletionDonutChart.scss";
-@import "courseware/course/course-exit/CourseRecommendationsExp/course_recommendations.exp";
+@import 'courseware/course/celebration/CelebrationModal.scss';
+@import 'shared/streak-celebration/StreakCelebrationModal.scss';
+@import 'courseware/course/content-tools/calculator/calculator.scss';
+@import 'courseware/course/content-tools/contentTools.scss';
+@import 'course-home/dates-tab/Badge.scss';
+@import 'course-home/dates-tab/Day.scss';
+@import 'course-home/outline-tab/widgets/UpgradeCard.scss';
+@import 'course-home/outline-tab/widgets/ProctoringInfoPanel.scss';
+@import 'course-home/progress-tab/course-completion/CompletionDonutChart.scss';
+@import 'courseware/course/course-exit/CourseRecommendationsExp/course_recommendations.exp';
 
 /** [MM-P2P] Experiment */
-@import "experiments/mm-p2p/index.scss";
+@import 'experiments/mm-p2p/index.scss';
 
-a:not(.btn){
-  color: #6366f1 !important;
-}
+
