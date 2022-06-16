@@ -24,7 +24,8 @@
 
   header {
     flex: 0 0 auto;
-
+   background-color: rgb(17, 24, 39);
+   padding: 10px;
     .logo {
       display: block;
       box-sizing: content-box;
@@ -373,3 +374,5 @@
 
 /** [MM-P2P] Experiment */
 @import 'experiments/mm-p2p/index.scss';
+
+

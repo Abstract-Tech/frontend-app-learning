@@ -10,12 +10,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Switch } from 'react-router-dom';
 
-import Footer, { messages as footerMessages } from '@edx/frontend-component-footer';
+import Footer from "./course-footer/Footer";
 
 import appMessages from './i18n';
 import { UserMessagesProvider } from './generic/user-messages';
 
 import './index.scss';
+import "./build.css";
 import OutlineTab from './course-home/outline-tab';
 import { CourseExit } from './courseware/course/course-exit';
 import CoursewareContainer from './courseware';
@@ -95,6 +96,6 @@ initialize({
   },
   messages: [
     appMessages,
-    footerMessages,
+  
   ],
 });
