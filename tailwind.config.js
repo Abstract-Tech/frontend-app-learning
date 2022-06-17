@@ -1,12 +1,12 @@
 module.exports = {
-  purge:{
-    enabled:true,
+  purge: {
+    enabled: true,
   },
   content: {
   },
   theme: {
-      extend: {},
+    extend: {},
   },
 
   plugins: [],
-}
+};
